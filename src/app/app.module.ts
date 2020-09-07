@@ -14,6 +14,7 @@ import { PacientesListComponent } from './Components/pacientes-list/pacientes-li
 import { CitaMainComponent } from './Components/cita-main/cita-main.component';
 
 import { MedicosListComponent } from './Components/medicos-list/medicos-list.component';
+import { FichaPacienteComponent } from './Components/ficha-paciente/ficha-paciente.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { MedicosListComponent } from './Components/medicos-list/medicos-list.com
     PacientesListComponent,
     CitaMainComponent,
   
-    MedicosListComponent
+    MedicosListComponent,
+  
+    FichaPacienteComponent
     
   ],
   imports: [
