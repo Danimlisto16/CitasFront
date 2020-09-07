@@ -1,0 +1,48 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Panel Médico</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+</head>
+<body>
+    <h1 class="page_title">Bienvenido Dr. {{payLoad.Nombres}} - Especialista en {{payLoad.especialidad}}  </h1>
+<div class="side_menu">
+	<div class="burger_box">
+		<div class="menu-icon-container">
+			<a href="#" class="menu-icon js-menu_toggle closed">
+				<span class="menu-icon_box">
+					<span class="menu-icon_line menu-icon_line--1"></span>
+					<span class="menu-icon_line menu-icon_line--2"></span>
+                    <span class="menu-icon_line menu-icon_line--3"></span>
+				</span>
+			</a>
+		</div>
+    </div>
+	<div class="px-5">
+		<h2 class="menu_title">Menú</h2>
+		<ul class="list_load">
+            <h3>Dr. {{payLoad.Nombres}} {{payLoad.Apellidos}}</h3>
+            <h3>Area de {{payLoad.especialidad}}</h3><br><br>
+			<li class="list_item"><a href="#">Citas</a></li>
+            <li class="list_item"><a href="#">Pacientes</a></li>
+            <li class="list_item"><a href="#">Noticias</a></li><br><br>
+            <button class = "btn btn-danger" (click)="logout()">Cerrar Sesion</button>
+		</ul>
+	</div>
+</div>
+
+<app-cita-main class = "palist" ></app-cita-main>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+</body>
+</html>

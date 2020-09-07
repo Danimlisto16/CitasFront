@@ -1,18 +1,46 @@
+import { ServiceInterceptor } from './Services/service.interceptor';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './Components/login/login.component';
+import {WebStorageModule, LocalStorageService} from "angular-localstorage";
+import { PanelPacienteComponent } from './Components/panel-paciente/panel-paciente.component';
+import { PanelmedicoComponent } from './Components/panelmedico/panelmedico.component';
+import { LoginService } from './Services/login.service';
+import { PacientesListComponent } from './Components/pacientes-list/pacientes-list.component';
+import { CitaMainComponent } from './Components/cita-main/cita-main.component';
+
+import { MedicosListComponent } from './Components/medicos-list/medicos-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    PanelPacienteComponent,
+    PanelmedicoComponent,
+    PacientesListComponent,
+    CitaMainComponent,
+  
+    MedicosListComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+    
   ],
-  providers: [],
+  providers: [
+    LoginService, {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ServiceInterceptor,
+      multi: true
+    }
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
