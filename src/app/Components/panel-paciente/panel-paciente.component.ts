@@ -17,7 +17,6 @@ export class PanelPacienteComponent implements OnInit {
   }
 
 
-   
 logout(){
     swal.fire({
       title: 'Cerrar Sesión',

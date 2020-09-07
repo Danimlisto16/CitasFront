@@ -8,6 +8,7 @@ export class Persona {
     usuario:string;
     contrasena:string;
     correo:string;
+    genero:string;
 }
 
 

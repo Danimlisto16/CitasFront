@@ -1,3 +1,5 @@
+import { MedicoServiceService } from './Services/medico-service.service';
+
 import { ServiceInterceptor } from './Services/service.interceptor';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,7 +14,6 @@ import { PanelmedicoComponent } from './Components/panelmedico/panelmedico.compo
 import { LoginService } from './Services/login.service';
 import { PacientesListComponent } from './Components/pacientes-list/pacientes-list.component';
 import { CitaMainComponent } from './Components/cita-main/cita-main.component';
-
 import { MedicosListComponent } from './Components/medicos-list/medicos-list.component';
 import { FichaPacienteComponent } from './Components/ficha-paciente/ficha-paciente.component';
 
@@ -41,7 +42,8 @@ import { FichaPacienteComponent } from './Components/ficha-paciente/ficha-pacien
       provide: HTTP_INTERCEPTORS,
       useClass: ServiceInterceptor,
       multi: true
-    }
+    },
+    MedicoServiceService
     
   ],
   bootstrap: [AppComponent]
