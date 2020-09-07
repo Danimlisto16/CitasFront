@@ -1,1 +1,28 @@
-<p>medicos-list works!</p>
+
+<div id="contenedor">
+    <div *ngFor="let item of medi;" >
+        <div  id="tarjeta">
+            <div id="imagenmed">
+                <img [src]=item.imagenURL alt="imagen Médico">
+            </div>
+            <div id="datos">
+                <tbody>
+                    <tr>
+                        <td><h2><b>{{item.especialidad}}</b></h2></td>
+                    </tr>
+                    <tr>
+                        <td><h4> Dr.{{item.nombres}} {{item.apellidos}}</h4></td>
+                    </tr>
+                    <tr>
+                        <td><fa-icon [icon]="faPhone"></fa-icon><h4> {{item.documento}}</h4></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class = "btn btn-primary">Agendar cita</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </div>
+        </div><br>
+    </div>
+</div>

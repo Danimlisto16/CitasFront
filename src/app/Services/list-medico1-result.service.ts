@@ -9,7 +9,7 @@ import { isFunction } from 'util';
   providedIn: 'root'
 })
 export class ListMedico1ResultService {
-  url : string = "http://mtgr01-001-site1.gtempurl.com/api/producto";
+  url : string = "https://localhost:44302/api/medico";
 
   httpOptions={
     headers:new HttpHeaders({
@@ -21,6 +21,7 @@ export class ListMedico1ResultService {
   constructor(private http:HttpClient) { }
 
   list(): Observable<ListMedico1Result[]> {
+    debugger;
     return this.http.get<ListMedico1Result[]>(this.url, this.httpOptions)
       .pipe(
         retry(1)

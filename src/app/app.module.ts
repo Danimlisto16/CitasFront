@@ -1,5 +1,5 @@
-import { MedicoServiceService } from './Services/medico-service.service';
-
+import { ListMedico1ResultService } from './Services/list-medico1-result.service';
+import { ListMedico1Result } from './Models/list-medico1-result';
 import { ServiceInterceptor } from './Services/service.interceptor';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,7 +16,6 @@ import { PacientesListComponent } from './Components/pacientes-list/pacientes-li
 import { CitaMainComponent } from './Components/cita-main/cita-main.component';
 import { MedicosListComponent } from './Components/medicos-list/medicos-list.component';
 import { FichaPacienteComponent } from './Components/ficha-paciente/ficha-paciente.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +42,8 @@ import { FichaPacienteComponent } from './Components/ficha-paciente/ficha-pacien
       useClass: ServiceInterceptor,
       multi: true
     },
-    MedicoServiceService
+    ListMedico1ResultService
+    
     
   ],
   bootstrap: [AppComponent]
