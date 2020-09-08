@@ -1,4 +1,28 @@
-<p>pacientes-list works!</p>
-<body>
-    HOLA
-</body>
+
+<div id="contenedor">
+    <div *ngFor="let item of personas;" >
+        <div  id="tarjeta">
+            <div id="datos">
+                <tbody>
+                    <tr>
+                        <td><h4> <b>Paciente:</b>{{item.nombres}} {{item.apellidos}}</h4></td>
+                    </tr>
+                    <tr>
+                        <td><h4><b>Cédula:</b>{{item.cedula}}</h4></td>
+                    </tr>
+                    <tr>
+                        <td><h4><b>Contacto:</b> {{item.correo}}</h4></td>
+                    </tr>
+                    <tr>
+                        <td><h4><b>Género:</b> {{item.genero}}</h4></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class = "btn btn-info">Ver ficha</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </div>
+        </div><br>
+    </div>
+</div>

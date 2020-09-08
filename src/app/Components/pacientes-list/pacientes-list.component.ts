@@ -1,3 +1,5 @@
+import { PersonaService } from './../../Services/persona.service';
+import { Persona } from './../../Models/persona';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PacientesListComponent implements OnInit {
 
-  constructor() { }
+  personas:Persona[];
+
+  constructor(private ps: PersonaService) { }
 
   ngOnInit(): void {
+    this.list();
+  }
+
+
+  list() : void {
+    debugger;
+    this.ps.list().subscribe(result => {      
+      this.personas = result;
+    });
+  }
+
+  redirect(x){
+    
   }
 
 }

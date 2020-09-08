@@ -1,5 +1,43 @@
 img{
-    height: 200px;
-    width: 300px;
+    width: 270px;
+    height: 295px;
+}
+
+*{
+    font-family: 'Roboto',sans-serif;
+}
+
+#contenedor{
+    margin: 100px;
+    top: 100px;
+    height: 600px;
+    width: 90%;
+    max-width: 900px;
+    margin: 20px ;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header header header"
+			  "widget-1 widget-2 sidebar"
+                         "contenido contenido sidebar"
+
+                         "footer footer footer";
+    
+
+}
+
+#tarjeta{
+    margin: 5px;
+    border-radius: 25px;
+    color:black;
+    border-color: black;
+    border: 1px solid;
+    height: 300px;
+    width: 500px;
+    display: flex;
+    background-color: white;
+
+
     
 }

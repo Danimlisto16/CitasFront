@@ -31,17 +31,20 @@
 		<ul class="list_load">
             <h3>Dr. {{payLoad.Nombres}} {{payLoad.Apellidos}}</h3>
             <h3>Area de {{payLoad.especialidad}}</h3><br><br>
-			<li class="list_item"><a href="#">Citas</a></li>
-            <li class="list_item"><a href="#">Pacientes</a></li>
-            <li class="list_item"><a href="#">Noticias</a></li><br><br>
+			<li class="list_item" (click)="mostrar(1)"><a>Citas</a></li>
+            <li class="list_item"><a href="#" (click)="mostrar(2)">Pacientes</a></li>
+            <li class="list_item"><a href="#" (click)="mostrar(3)">Noticias</a></li><br><br>
             <button class = "btn btn-danger" (click)="logout()">Cerrar Sesion</button>
 		</ul>
 	</div>
+	
+</div>
+<div *ngIf="numVentana == 1">
+	<app-pacientes-list></app-pacientes-list>
 </div>
 
-<app-medicos-list></app-medicos-list>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
 </body>

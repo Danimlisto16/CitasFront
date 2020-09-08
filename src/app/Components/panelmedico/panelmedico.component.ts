@@ -15,6 +15,7 @@ import * as $ from 'jquery';
 export class PanelmedicoComponent implements OnInit {
   payLoad = JSON.parse(window.atob(localStorage.getItem("token").split('.')[1]));//OBTENGO TODOS LOS DATOS DEL MEDICO
   
+  numVentana:number;
   
   
   constructor(private auth:LoginService,private router:Router) { }
@@ -92,6 +93,13 @@ logout(){
     });
     
 
+  }
+
+
+
+  mostrar(x){
+    debugger;
+    this.numVentana = x;
   }
   
 

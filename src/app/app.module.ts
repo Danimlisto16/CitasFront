@@ -1,3 +1,5 @@
+import { PersonaService } from './Services/persona.service';
+import { Persona } from './Models/persona';
 import { ListMedico1ResultService } from './Services/list-medico1-result.service';
 import { ListMedico1Result } from './Models/list-medico1-result';
 import { ServiceInterceptor } from './Services/service.interceptor';
@@ -42,7 +44,8 @@ import { FichaPacienteComponent } from './Components/ficha-paciente/ficha-pacien
       useClass: ServiceInterceptor,
       multi: true
     },
-    ListMedico1ResultService
+    ListMedico1ResultService,
+    PersonaService
     
     
   ],
